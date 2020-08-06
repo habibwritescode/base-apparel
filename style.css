@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(./images/bg-pattern-desktop.svg) no-repeat;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 62.5%;
+    min-height: 100vh;
+}
+
+header{
+    margin: 0 auto;
+    padding: 25px 0;
+    width: 80vw;
+}
+
+#logo{
+    height: 25px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-img{
+    background-size: cover;
+    background: url(./images/hero-mobile.jpg) no-repeat;
+    height: 250px;
+}
+
+#main-text{
+    margin: 0 auto;
+    padding-top: 50px;
+    width: 80vw;
+}
+
+h1{
+    font-size: 3.5em;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+span{
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+#hello{
+    color: hsl(0, 36%, 70%);
+    font-size: 1.42em;
+    line-height:1.5em;
+    text-align: center;
+}
+
+.input-cont{
+    margin-top: 35px;
+    position: relative;
+}
+
+input{
+    background-image: url(../images/icon-arrow.svg);
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 20px;
+    height: 3em;
+    outline: none;
+    padding: 20px;
+    position: relative;
+    width: 95%;
+}
+
+input:focus,
+input:active{
+    border-color: hsl(0, 93%, 68%);
+}
+
+input::placeholder{
+    color: hsl(0, 36%, 70%);
+    opacity: 1;
+}
+
+.error{
+    display: none;
+    height: 20px;
+    position: absolute;
+    right: 90px;
+    top: 10px;
+}
+
+button{
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: 0;
+    border-radius: 25px;
+    height: 3.2em;
+    outline: none;
+    position: absolute;
+    right: 4px;
+    width: 60px;
+}
+
+button:hover{
+    background-image: linear-gradient(135deg, pink, hsl(0, 36%, 70%));
+    box-shadow: 0px 5px 10px 0px gray;
+    width: 70px;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    header{
+        padding: 35px 0;
+    }
+    
+    main{
+        flex-direction: row-reverse;
+    }
+    
+    .hero-img{
+        background: url(./images/hero-desktop.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 30vw;
+    }
+    
+    #main-text{
+        padding-top: 60px;
+        width: 80vw;
+    }
+    
+    h1{
+        font-size: 4.5em;
+        margin-bottom: 0.6em;
+        text-align: left;
+    }
+    
+    #hello{
+        text-align: left;
+        width: 40vw;
+    }
+    
+    .input-cont{
+        width: 40vw;
+    }
+    
+    input{
+        width: 95%;
+    }    
+
+    .error{
+        right: 120px;
+    }
+
+    button{
+        border-radius: 25px;
+        right: 6px;
+        width: 80px;
+    }
+    
+    button:hover{
+        width: 100px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {    
+    .hero-img{
+        width: 40vw;
+    }
+
+    #hello{
+        width: 30vw;
+    }
+    
+    .input-cont{
+        width: 30vw;
+    }
+}

@@ -4,44 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Base Apparel coming soon page</title>
 </head>
 
 <body>
-
-  <header></header>
+  <header>
+    <img id="logo" src="./images/logo.svg" alt="">
+  </header>
 
   <main>
-    <h1>We're coming soon</h1>
+    <div class="hero-cont">
+      <div class="hero-img"></div>
+    </div>
 
-    <p>Hello fellow shoppers! We're currently building our new fashion store.
-      Add your email below to stay up-to-date with announcements and our launch deals.</p>
+    <section id="main-text">
+      <h1><span>WE'RE</span> <br>COMING<br> SOON</h1>
+      <p id="hello">Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-    <input type="email" placeholder="Email Address">
+      <form class="input-cont">
+        <input type="email" placeholder="Email Address" required>
+        <img class="error" src="./images/icon-error.svg" alt="">
+        <button><img src="./images/icon-arrow.svg" alt=""></button>
+      </form>
+    </section>
   </main>
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://github.com/habibwritescode">Habib Afolabi</a>.
-    </p>
-  </footer>
+  <script src="./script.js"></script>
 </body>
 
 </html>
