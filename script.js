@@ -1,6 +1,8 @@
 const button = document.querySelector('button')
 const input = document.querySelector('input')
-const error = document.querySelector('.error')
+const errorIcon = document.querySelector('.error-icon')
+const errorMessage = document.querySelector('.error-message')
+
 
 const listener = (e) => {
     e.preventDefault()
@@ -11,7 +13,8 @@ const listener = (e) => {
         input.value = ''
     }
     else if (input.value === '' || !isMatched) {
-        error.style.display = 'block'
+        errorIcon.style.display = 'block'
+        errorMessage.style.display = 'block'
     }
 }
 
@@ -20,5 +23,6 @@ const listener = (e) => {
 button.addEventListener('click', listener)
 
 input.addEventListener('blur', function removeError() {
-    error.style.display = 'none'
+    errorIcon.style.display = 'none'
+    errorMessage.style.display = 'none'
 })

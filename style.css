@@ -61,6 +61,7 @@ span{
 .input-cont{
     margin-top: 35px;
     position: relative;
+    padding-bottom: 50px;
 }
 
 input{
@@ -84,7 +85,7 @@ input::placeholder{
     opacity: 1;
 }
 
-.error{
+.error-icon{
     display: none;
     height: 20px;
     position: absolute;
@@ -101,6 +102,14 @@ button{
     position: absolute;
     right: 4px;
     width: 60px;
+}
+
+.error-message{
+    color: hsl(0, 93%, 68%);
+    font-size: 14px;
+    padding-top: 10px;
+    padding-left: 20px;
+    display: none;
 }
 
 button:hover{
@@ -155,7 +164,7 @@ button:hover{
         width: 95%;
     }    
 
-    .error{
+    .error-icon{
         right: 120px;
     }
 
